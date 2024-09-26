@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天气泡</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 600px;
+            height: 150px;
+            border-radius: 100px;
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nick {
+            font-size: 2em;
+            color: aliceblue;
+            width: 600px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 400px;
+            font-size: 0;
+            text-align: center;
+        }
+
+        .avatar>img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="nick">小赵同学</div>
+            <div class="avatar">
+                <img src="https://avatars.githubusercontent.com/u/94612053?v=4" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
