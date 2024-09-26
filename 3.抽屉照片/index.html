@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽屉照片-css效果</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .main {
+            width: 1200px;
+            height: 400px;
+            display: flex;
+            -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+        }
+
+        .img-box {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+
+            transition: 0.4s;
+        }
+
+        .img-box img {
+            width: 500px;
+            height: 400px;
+            border-radius: 5px;
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+        .img-box:hover {
+            width: 2160px;
+            height: 400px;
+        }
+
+        .img-box img:nth-child(5) {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img-box"><img src="./image/1.jpg" alt="" srcset=""></div>
+        <div class="img-box"><img src="./image/2.jpg" alt="" srcset=""></div>
+        <div class="img-box"><img src="./image/3.jpg" alt="" srcset=""></div>
+        <div class="img-box"><img src="./image/4.jpg" alt="" srcset=""></div>
+        <div class="img-box"><img src="./image/5.jpg" alt="" srcset=""></div>
+        <div class="img-box"><img src="./image/6.jpg" alt="" srcset=""></div>
+    </div>
+</body>
+
+</html>
