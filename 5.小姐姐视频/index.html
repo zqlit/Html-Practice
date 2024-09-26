@@ -1,0 +1,93 @@
+<div style="height:640px">
+    <div id="videoContainer">
+        <div id="videoTitle">累了吗？来看看美女吧</div>
+        <video id="videoPlayer" controls autoplay>
+            <source id="videoSource" src="https://api.mhimg.cn/api/girls_video/?sort=all" type="video/mp4">
+        </video>
+        <button id="refreshButton">点击欣赏下一位美女</button>
+    </div>
+</div>
+<style>
+    #videoContainer {
+        width: 100%;
+        /* 设置视频容器的宽度 */
+        height: 580px;
+        /* 设置视频容器的高度 */
+        margin: 20px auto;
+        /* 居中视频容器 */
+        position: relative;
+        /* 为绝对定位的标题提供参考 */
+    }
+
+    #videoPlayer {
+        width: 100%;
+        /* 视频宽度占满容器 */
+        height: 100%;
+        /* 视频高度占满容器 */
+    }
+
+    #videoTitle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* 半透明背景 */
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #refreshButton {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #4CAF50;
+        /* Green background */
+        color: white;
+        /* White text */
+        padding: 15px 32px;
+        /* Padding around the text */
+        text-align: center;
+        /* Center the text inside the button */
+        text-decoration: none;
+        /* Remove underline from text */
+        font-size: 16px;
+        /* Set font size */
+        cursor: pointer;
+        /* Change mouse cursor on hover */
+        border: none;
+        /* Remove border */
+        border-radius: 8px;
+        /* Rounded corners */
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* Add shadow */
+        transition: background-color 0.3s, box-shadow 0.3s;
+        /* Smooth transition for hover effects */
+    }
+
+    #refreshButton:hover {
+        background-color: #45a049;
+        /* Darker green background on hover */
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3), 0 10px 30px 0 rgba(0, 0, 0, 0.22);
+        /* Enhanced shadow on hover */
+    }
+
+    #refreshButton:active {
+        background-color: #3e8e41;
+        /* Even darker green background on click */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* Reduced shadow on click */
+        transform: translateY(4px);
+        /* Button press effect */
+    }
+</style>
+<script>
+    // 刷新页面按钮点击事件
+    document.getElementById('refreshButton').addEventListener('click', function () {
+        window.location.reload();
+    });
+    // 当文档加载完毕时初始化视频播放器
+    document.addEventListener('DOMContentLoaded', initVideoPlayer);
+</script>
