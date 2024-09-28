@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+#score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 列 */
+    gap: 10px;
+}
+
+.mole {
+    width: 100px;
+    height: 100px;
+    background-image: url('hole.gif'); /* 替换为你的地鼠图片路径 */
+    background-size: cover; /* 确保图片覆盖整个区域 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mole.active {
+    opacity: 0.8; /* 可以稍微改变透明度来表示活动状态 */
+}
+
+#start-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
